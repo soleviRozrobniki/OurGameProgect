@@ -7,7 +7,7 @@ public class TurretScript : MonoBehaviour
     public float rotationSpeed = 10f;
     public GameObject bulletPrefab;
     public Transform firePoint;
-    public float fireRate = 1f, bulletSpeed;
+    public float fireRate = 10f, bulletSpeed;
 
     private Transform player;
     private float fireCountdown = 0f;
@@ -18,7 +18,7 @@ public class TurretScript : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
         // Запуск пострілів з моменту старту
-        fireCountdown = 1f / fireRate;
+        fireCountdown = 10f / fireRate;
         InvokeRepeating("Shoot", 3f,1 / fireRate);
     }
 
