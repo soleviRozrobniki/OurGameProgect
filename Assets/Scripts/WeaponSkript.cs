@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class WeaponSkript : MonoBehaviour
 {
+    public float damage;
     public GameObject bulletPrefab;
     public Transform firePoint;
-    public float bulletSpeed,damage;
+    public float bulletSpeed;
     [SerializeField] private int CurAmmo, Ammo, MaxAmmo, CurMaxAmmo;
     [SerializeField] private TextMeshProUGUI ammoText;
     // Start is called before the first frame update
