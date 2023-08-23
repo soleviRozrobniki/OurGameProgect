@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Weapon
   - SpawnPoint
+  - Portal
+  - BulletFriend
+  - Room
   layers:
   - Default
   - TransparentFX
@@ -14,7 +17,7 @@ TagManager:
   - Water
   - UI
   - Turret
-  - 
+  - ParticleSystem
   - 
   - 
   - 

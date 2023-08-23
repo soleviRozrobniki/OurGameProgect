@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1e90ddb108ded84e8479bd95a15e239, type: 3}
+  m_Name: Jnci
+  m_EditorClassIdentifier: 
+  _damage: 123
+  _price: 123
+  _fireRate: 123
+  _speedOfBullet: 123
+  _turretName: Nps
+  _model: {fileID: 6878448411115020561, guid: 6649442be7d5233428c90dafacfb75c6, type: 3}
+  _sprite: {fileID: -2135585597343286014, guid: 2dd3f00989005df4b98241ec0ede1eaa, type: 3}

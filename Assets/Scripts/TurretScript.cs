@@ -5,6 +5,7 @@ using UnityEngine;
 public class TurretScript : MonoBehaviour
 {
     public float rotationSpeed = 10f;
+    public int hp;
     public GameObject bulletPrefab;
     public Transform firePoint;
     public float fireRate = 1f, bulletSpeed;
@@ -24,11 +25,12 @@ public class TurretScript : MonoBehaviour
     {
         Vector2 direction = player.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 180;
-
         transform.rotation = Quaternion.Euler(0, 0, angle);
-        
-
         fireCountdown -= Time.deltaTime;
+        if (hp <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Shoot()
@@ -39,9 +41,10 @@ public class TurretScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-     
-            
-
-
+        if(collision.transform.tag == "BulletFriend")
+        {
+            hp -= 2;
+            Destroy(collision.gameObject);
+        }
     }
 }

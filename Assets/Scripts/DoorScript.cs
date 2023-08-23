@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class DoorScript : MonoBehaviour
 {
+    [HideInInspector] public bool isOpened;
     private Animator _animator;
     public bool isLocked;
-    // Start is called before the first frame update
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -17,13 +17,16 @@ public class DoorScript : MonoBehaviour
         if (collision.CompareTag("Player") && !isLocked)
         {
             _animator.SetBool("Open", true);
+            isOpened = true;
         }
+
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !isLocked)
         {
             _animator.SetBool("Open", false);
+            isOpened = false;
         }
     }
 }
